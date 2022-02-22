@@ -1,4 +1,4 @@
-# CTResolver
+# DethripticChromosome
 ## Haplotype resolution of chromothriptic and rearranged chromosomes 
 
 Here we present a methodology for reconstructing chromothriptic and complex rearrangments which are restricted to a single allele. It will not work if the complex rearrangments affect both alleles but it is possible to reconstruct more complex rearrangments but this requires modification of the assignment rules. 
@@ -9,7 +9,7 @@ This analysis is done on a chromosome basis in order to make it easy to parallel
 
 Whatshap can be found here: https://whatshap.readthedocs.io/en/latest/ 
 
-In order run this code, you will need first need to run whatshap to aquire the phasing information. Although multiple sequencing modalitiies can be input into whatshap, we recommend that you only use CCS reads as this will lead to a high number of phase blocks but a low switching error rate. This is important as the presence of complex rearagements an subclonal regions may result in more switch errors than when phasing more normal samples. We recommend that the vcf used for phasing is filtered 
+In order run this code, you will need first need to run whatshap to aquire the phasing information. Although multiple sequencing modalitiies can be input into whatshap, we recommend that you only use CCS reads as this will lead to a high number of phase blocks but a low switching error rate. This is important as the presence of complex rearagements an subclonal regions may result in more switch errors than when phasing more normal samples. We recommend that the vcf used for phasing is filtered to remove repeat regions or low complexity regions as annotated by UCSC. This is to refuce switch errors.
 
 You will need to run: 
 
@@ -63,7 +63,15 @@ This will produce sam files that contain reads that phase to haplotype 1 (called
 
 If the denstiy of breakpoints on the chromothriptic region is higher than the average density across the other samples, it will be informative to use SV presence to assign haplotype blocks to one haplotype over the other. 
 
-In order to do this run a long read SV caller which will output readnames with the SV calls 
+In order to do this run a long read SV caller which will output readnames with the SV calls. For very high density SV calls, it was important to validate the initial call set. This is an optional step but it uses read evidence to determine support for reads. 
+  
+To run the SV validater, there are two steps:
+
+1) Make initial dictionary
+2) Generate a consensus
+  
+  
+  
 
 
 
