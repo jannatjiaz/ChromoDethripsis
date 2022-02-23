@@ -1,20 +1,3 @@
-
-bsub -G team154-grp -oo logs/chr6_103_phase_CCS_reads.out -q long -R'select[mem>12000] rusage[mem=12000]' -M12000 -n1 -J chr6_phase_CCS_reads \
-python CTResolveHighDensity.py --chromosome chr6 \
---bam /lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/haplotag_chr6_phased_ccs_no_simple_repeats.bam \
---bedpe /lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/sniffles/OESO_103_sniffles_hg38.bedpe \
---heterozygousSnps /lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/snp_phasing/variants_chr6_allhet_no_simple_repeats_filtered_nohead.vcf \
---readnames /lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/chr6_all_read_names.txt \
---haplotype1_reads /lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/haplotype1_read_chr_pos_new.txt \
---haplotype2_reads /lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/haplotype2_read_chr_pos_new.txt \
---haplotype_blocks  /lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/ccs_blocks.tsv \
---phased_haplotype_blocks /lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/Phasing_CCS_08112019.xlsx  \
---phased_vcf /lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/variants_phased_nosimplerepeats_filtered_ccs.vcf \
---loh_regions tmp2 \
---outputdir phased_CCS_reads/
-
-
-
 #! /usr/bin/python
 
 import pysam 
