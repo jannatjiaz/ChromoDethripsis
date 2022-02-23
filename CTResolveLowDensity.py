@@ -1,21 +1,5 @@
 #! /usr/bin/python
 
-while read CHR; do
-    bsub -G team154-grp -oo logs/${CHR}_phase_CCS_reads.out -q long -R'select[mem>12000] rusage[mem=12000]' -M12000 -n1 -J ${CHR}_phase_CCS_reads \
-    python CTResolveLowDensity.py --chromosome ${CHR} \
-    --bam /lustre/scratch117/casm/team154/ji2/OesophagealLongRead_WTSI-OESO_117/phaseCCS/whatshap/phased_bams/haplotag_${CHR}_phased_ccs_no_simple_repeats.bam \
-    --readnames ../OesophagealLongRead_WTSI-OESO_117/phaseCCS/phased_CCS_reads/allreadnames/allreadnames_${CHR}.txt \
-    --haplotype1_reads ../OesophagealLongRead_WTSI-OESO_117/phaseCCS/whatshap/phased_reads/OESO_117_hg38_${CHR}_tagged_reads_haplotype1_readnames_chr_pos.txt \
-    --haplotype2_reads ../OesophagealLongRead_WTSI-OESO_117/phaseCCS/whatshap/phased_reads/OESO_117_hg38_${CHR}_tagged_reads_haplotype2_readnames_chr_pos.txt \
-    --haplotype_blocks  ../OesophagealLongRead_WTSI-OESO_117/phaseCCS/whatshap/whatshap_stats/OESO_117_${CHR}_ccs_blocks.tsv \
-    --phased_haplotype_blocks /lustre/scratch117/casm/team154/pc8/Jannat_pacbio/OESO_117/OESO_117_haplotype_blocks.txt  \
-    --loh_regions tmp \
-	--outputdir phased_CCS_reads/
-done < chromosomes.txt
-
-
-
-
 import pysam 
 import pandas as pd
 import random
