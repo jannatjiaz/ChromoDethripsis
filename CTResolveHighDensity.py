@@ -39,18 +39,6 @@ loh_regions_file=args.loh_regions
 outputdir=args.outputdir
 
 
-bamfile="/lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/haplotag_chr6_phased_ccs_no_simple_repeats.bam"
-bedpefile =  "/lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/sniffles/OESO_103_sniffles_hg38.bedpe"
-hetsnps = "/lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/snp_phasing/variants_chr6_allhet_no_simple_repeats_filtered_nohead.vcf"
-readnames_file = "/lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/chr6_all_read_names.txt"
-haplotype1_readnames_chr_pos_file = "/lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/haplotype1_read_chr_pos_new.txt"
-haplotype2_readnames_chr_pos_file = "/lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/haplotype2_read_chr_pos_new.txt"
-haplotype_blocks_file = "/lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/ccs_blocks.tsv"
-phasing_haplotype_blocksfile = "Haplotype_blocks_chr6.txt"
-phased_vcf_file = "/lustre/scratch117/casm/team154/ji2/OesophagealLongRead/python_phasingSVs/haplotype_phasing/ccs_no_simple_repeats/variants_phased_nosimplerepeats_filtered_ccs.vcf"
-loh_regions = "tmp2"
-outputdir = "phased_CCS_reads"
-
 
 ##LOAD DATA
 #bam
