@@ -97,7 +97,7 @@ With these files you can run CTResolveLowDensity.py. It assumes that there are e
 
 ### Next steps
   
-ChomoDethripsis will produce a bam file for each haplotype. From this conventional assembly methods can be ultilised. It is important to remember that resolution of complex strucutral variation will require manual checking of results to ensure main features of chromothrpisis have been accurately reconstructed. 
+ChomoDethripsis will produce a bam file for each haplotype. From this conventional assembly methods can be ultilised. It is important to remember that resolution of complex strucutral variation will require manual checking of results to ensure main features of chromothrpisis have been accurately reconstructed.  If using Hi-C to subsequently scaffold the initial assembly, run the Hi-C resoltion script in HapFunc. 
   
   
   
